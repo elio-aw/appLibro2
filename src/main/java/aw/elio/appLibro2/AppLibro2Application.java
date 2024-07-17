@@ -1,6 +1,6 @@
 package aw.elio.appLibro2;
 
-import aw.elio.appLibro2.principal.Console;
+import aw.elio.appLibro2.principal.AppConsola;
 import aw.elio.appLibro2.service.AutorService;
 import aw.elio.appLibro2.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class AppLibro2Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Console principal = new Console(autorService, libroService);
+		AppConsola principal = new AppConsola(autorService, libroService);
 		principal.mostrarMenu();
 	}
 }
